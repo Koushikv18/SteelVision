@@ -5,8 +5,11 @@ from sklearn.metrics import (
     roc_auc_score, confusion_matrix
 )
 
-DATA_PATH = "../../Data/syntheticData.csv"
-MODEL_DIR = "../../models"
+import os
+
+UTILS_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_PATH = os.path.abspath(os.path.join(UTILS_DIR, "..", "Data", "syntheticData.csv"))
+MODEL_DIR = os.path.abspath(os.path.join(UTILS_DIR, "..", "models"))
 RANDOM_STATE = 42
 TEST_SIZE = 0.2
 

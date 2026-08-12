@@ -21,8 +21,13 @@ this file specifically so they can be swapped for better numbers later
 without touching any of the calculation logic.
 """
 
+import os
+import sys
 import joblib
 from sklearn.metrics import confusion_matrix
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.abspath(os.path.join(SCRIPT_DIR, "..", "utils")))
 
 from model_utils import load_data, split_data, MODEL_DIR
 

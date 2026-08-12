@@ -1,13 +1,16 @@
+import os
 import sys
 import joblib
 import pandas as pd
 import shap
 import matplotlib.pyplot as plt
 
-sys.path.append("../utils")
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.abspath(os.path.join(SCRIPT_DIR, "..", "utils")))
+
 from model_utils import load_data, split_data, MODEL_DIR
 
-OUT_DIR = "../../outputs_shap"
+OUT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "..", "outputs_shap"))
 
 
 def main():

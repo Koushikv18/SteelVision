@@ -1,10 +1,12 @@
-
+import os
 import sys
 import joblib
 from sklearn.model_selection import GridSearchCV
 from xgboost import XGBClassifier
 
-sys.path.append("../utils")
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.abspath(os.path.join(SCRIPT_DIR, "..", "utils")))
+
 from model_utils import load_data, split_data, evaluate, MODEL_DIR, RANDOM_STATE
 
 

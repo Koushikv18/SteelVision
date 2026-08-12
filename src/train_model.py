@@ -1,3 +1,4 @@
+import os
 import sys
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
@@ -5,8 +6,10 @@ import pandas as pd
 import joblib
 from xgboost import XGBClassifier
 
-sys.path.append("../utils")
-from model_utils import load_data, split_data, evaluate, RANDOM_STATE
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.abspath(os.path.join(SCRIPT_DIR, "..", "utils")))
+
+from model_utils import load_data, split_data, evaluate, MODEL_DIR, RANDOM_STATE
 
 Test_size = 0.2
 Random_state = 42
