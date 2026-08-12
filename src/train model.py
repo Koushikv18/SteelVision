@@ -26,8 +26,6 @@ def train_logistic_regression(X_train, X_test, y_train, y_test):
     return model, scaler
 
 def train_xgboost(X_train, X_test, y_train, y_test):
-    """PRIMARY model. Trees naturally handle U-shapes and interactions
-    without needing them hand-engineered."""
  
     model = XGBClassifier(
         n_estimators=200,
