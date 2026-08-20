@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Environment variables / secrets (if any get added later, e.g. for API keys)
+.env
+
+# Large / regenerable artifacts -- comment out any of these if you WANT
+# them tracked in git (e.g. small demo datasets or plots you want visible
+# on GitHub without cloning + running the pipeline)
+# models/*.pkl
+# outputs_eda/*.png
+# outputs_shap/*.png

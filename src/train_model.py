@@ -11,9 +11,6 @@ sys.path.append(os.path.abspath(os.path.join(SCRIPT_DIR, "..", "utils")))
 
 from model_utils import load_data, split_data, evaluate, MODEL_DIR, RANDOM_STATE
 
-Test_size = 0.2
-Random_state = 42
-
 def train_logistic_regression(X_train, X_test, y_train, y_test):
     scaler = StandardScaler()
     X_train_scaled = scaler.fit_transform(X_train)
