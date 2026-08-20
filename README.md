@@ -2,7 +2,7 @@ An ML system that predicts whether a steel batch will be defective based on proc
 
 ## Problem
 
-In steel manufacturing, defects (cracks, porosity, scale) trace back to process conditions during production. Predicting defect risk early — and knowing which factor is driving it — helps engineers catch bad batches before shipping and fix the process, not just react after the fact.
+In steel manufacturing, defects (cracks, porosity, scale) trace back to process conditions during production. Predicting defect risk early and knowing which factor is driving it helps engineers catch bad batches before shipping and fix the process, not just react after the fact.
 
 ## Current state
 
@@ -26,7 +26,7 @@ Rough priority order:
 **High priority**
 - Build the serving layer the docs promise: a FastAPI `/predict` (and `/predict/batch`) endpoint around the tuned model + scaler, and a Streamlit "what-if" dashboard for engineers to move the sliders and see risk/SHAP update live.
 - Add `requirements.txt` (or `pyproject.toml`) pinning `scikit-learn`, `xgboost`, `shap`, `pandas`, `joblib`, `matplotlib` — there's currently no dependency manifest, so the project can't be set up reproducibly from a fresh clone.
-- Add a `.gitignore` (`__pycache__/`, `*.pyc`, `.venv/`) — a compiled `utils/__pycache__/model_utils.cpython-313.pyc` is currently committed to the repo.
+- Add a `.gitignore` (`__pycache__/`, `*.pyc`, `.venv/`)  a compiled `utils/__pycache__/model_utils.cpython-313.pyc` is currently committed to the repo.
 
 **Medium priority**
 - Wire up the UCI real-data validation study described in `Data/DATA_README.md`: a script that trains XGBoost on `Faults.NNA`/`Faults27x7_var` for multi-class fault-type classification and applies SHAP, to show the methodology generalizes beyond the synthetic set.
